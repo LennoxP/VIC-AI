@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(/front-end/assets/images/background-img/background-image.png) no-repeat center / cover;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+
+.button {
+  
+    --main-color: rgb(46, 21, 115);
+    --main-bg-color: rgba(46, 21, 116, 0.36);
+    --pattern-color: rgba(46, 21, 116, 0.073);
+  
+
+    filter: hue-rotate(0deg);
+  
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    background: radial-gradient(
+        circle,
+        var(--main-bg-color) 0%,
+        rgba(0, 0, 0, 0) 95%
+      ),
+      linear-gradient(var(--pattern-color) 1px, transparent 1px),
+      linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+    background-size:
+      cover,
+      15px 15px,
+      15px 15px;
+    background-position:
+      center center,
+      center center,
+      center center;
+    border-image: radial-gradient(
+        circle,
+        var(--main-color) 0%,
+        rgba(0, 0, 0, 0) 100%
+      )
+      1;
+    border-width: 1px 0 1px 0;
+    color: var(--main-color);
+    padding: 1rem 3rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    height: 100px;
+    width: 300px;
+    transition: background-size 0.2s ease-in-out;
+    animation: borderGlowMove 10s infinite;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-size:
+      cover,
+      10px 10px,
+      10px 10px;
+  }
+  .button:active {
+    filter: hue-rotate(5deg);
+  }
+  
+  @keyframes borderGlowMove {
+    0% {
+      box-shadow: 0 0 5px #5F4B7B, 0 0 10px #5F4B7B, 0 0 0px #6A4C93;
+    }
+    25% {
+      box-shadow: 5px 0 10px #5F4B7B, 5px 0 50px #6A4C93, 0 0 0px #6A4C93;
+    }
+    50% {
+      box-shadow: 0 5px 10px #5F4B7B, 0 5px 50px #6A4C93, 0 0 0px #6A4C93;
+    }
+    75% {
+      box-shadow: -5px 0 10px #5F4B7B, -5px 0 50px #6A4C93, 0 0 0px #6A4C93;
+    }
+    100% {
+      box-shadow: 0 0 5px #5F4B7B, 0 0 10px #5F4B7B, 0 0 0px #6A4C93;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    bottom: -15vh;
+    z-index: -1;
+  }
+  
+  .inner {
+    --w: 100px;
+    --h: 150px;
+    --translateZ: calc((var(--w) + var(--h)) + 0px);
+    --rotateX: -15deg;
+    --perspective: 5px;
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 25%;
+    left: calc(50% - (var(--w) / 2) - 2.5px);
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: perspective(var(--perspective));
+    animation: rotating 100s linear infinite; /* */
+  }
+  @keyframes rotating {
+    from {
+      transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+        rotateY(0);
+    }
+    to {
+      transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+        rotateY(1turn);
+    }
+  }
+  
+  .card {
+    position: absolute;
+    border: 2px solid rgba(46, 21, 115);
+    border-radius: 12px;
+    overflow: hidden;
+    inset: 0;
+    transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+      translateZ(var(--translateZ));
+  }
+  
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #0000
+      radial-gradient(
+        circle,
+      );
+  }
+  

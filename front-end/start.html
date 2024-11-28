@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/start.css">
+    <title>Start</title>
+</head>
+<body>
+    <div id="container">
+    <button class="button">Start</button>
+    </div>
+<div class="wrapper">
+    <div class="inner" style="--quantity: 10;">
+      <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 3;--color-card: 215, 252, 142;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 4;--color-card: 252, 252, 142;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 5;--color-card: 252, 208, 142;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 6;--color-card: 252, 142, 142;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 7;--color-card: 252, 142, 239;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 8;--color-card: 204, 142, 252;">
+        <div class="img"></div>
+      </div>
+      <div class="card" style="--index: 9;--color-card: 142, 202, 252;">
+        <div class="img"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const startButton = document.querySelector('.button'); // Use querySelector se for apenas um botão
+    const container = document.getElementById('container');
+
+    startButton.addEventListener('click', () => {
+      container.classList.add('hidden'); // Adiciona a classe para iniciar a transição
+      setTimeout(() => {
+        window.location.href = 'index.html'; // Redireciona após o efeito
+      }, 1000); // 1 segundo (deve coincidir com o tempo de transição)
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Basic CSS Reset for 2024 */
+
+/* Global reset for margins, paddings, and box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Set base font for body */
+body {
+  font-family: 'Arial', sans-serif; /* Default font, can be changed */
+  line-height: 1.5;
+  background-color: #fff; /* Default background color */
+  color: #333; /* Default text color */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styling (bullets or numbers) */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove underline from links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove border and appearance of form elements */
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+}
+
+/* Ensure images are responsive and fit their container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Collapse table borders and remove extra spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset styling for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Reset paragraph margin */
+p {
+  margin: 0;
+}
+
+/* Reset button appearance */
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Ensure the body takes full screen height */
+html, body {
+  height: 100%;
+}
+
+/* Prevent horizontal overflow and unwanted layout shifts */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Remove outline from focused links */
+a:focus {
+  outline: none;
+}
+
+/* Reset for <summary> */
+summary {
+  display: list-item;
+  cursor: pointer;   
+  outline: none;     
+  list-style: none;  
+  background: none;  
+  padding: 0;        
+}

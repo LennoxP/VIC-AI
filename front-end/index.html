@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <!--
+        -------------------------
+        Meta Tags
+        -------------------------
+        -->
+
+        <!-- Set the character encoding for the page -->
+        <meta charset="UTF-8">
+        <!-- Viewport meta tag to ensure proper rendering on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <!-- Ensures compatibility with older versions of Internet Explorer -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Description for SEO purposes -->
+        <meta name="description" content="Uma inteligência artificial do Colégio Victorino!">
+        <!-- Keywords for search engines to index the page -->
+        <meta name="keywords" content="vic.ia">
+
+        <!--
+        -------------------------
+        Linking CSS Files
+        -------------------------
+        -->
+
+        <!-- Favicon icon for the website tab -->
+        <link rel="shortcut icon" href="assets/images/logo-img/logo-colegio.png" type="image/x-icon">
+        <!-- Reset CSS to ensure consistent styling across browsers -->
+        <link rel="stylesheet" href="assets/styles/reset.css">
+        <!-- Main stylesheet for the website's visual design -->
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <!-- Media queries stylesheet for responsive design -->
+        <link rel="stylesheet" href="assets/styles/media-queries.css">
+        <!-- Importing icons library (Remix Icons) for use in the page -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+
+        <!--
+        -------------------------
+        Page Title
+        -------------------------
+        -->
+        <!-- Title for the page's tab in the browser -->
+
+        <title>vic.ia</title>
+    </head>
+    <body>
+        
+        <!--
+        -------------------------
+        Header Section
+        -------------------------
+        -->
+
+        <header>
+            <!-- Logo displayed in the header -->
+            <figure>
+                <img src="assets/images/logo-img/logo-colegio.png" alt="logo of Colégio Victorino" class="logo-header">
+            </figure>
+             <!-- Navigation bar with links to different sections of the page -->
+            <nav>
+                <!-- Links to trigger the display of corresponding content -->
+                <ul>
+                    <li><a href="#" onclick="showDiv('nav-research')">RESEARCH</a></li>
+                    <li><a href="#" onclick="showDiv('nav-company')">COMPANY</a></li>
+                    <li><a href="#" onclick="showDiv('nav-products')">PRODUCTS</a></li>
+                    <li><a href="#" onclick="showDiv('nav-safety')">SAFETY</a></li>
+                </ul>
+            </nav>
+            <!--
+            -------------------------
+            Dropdown Overlays
+            -------------------------
+            -->
+            <!-- Each of these divs represents an overlay that shows additional information -->
+            <section>
+
+                <!-- Research information overlay -->
+                <div id="nav-research" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Informações de Pesquisa</h2>
+                        <p>O Colégio Victorino realiza diversas pesquisas educacionais focadas no desenvolvimento de metodologias de ensino inovadoras, visando a melhoria da aprendizagem dos alunos. As pesquisas abordam temas como tecnologia na educação, novas técnicas pedagógicas, e o impacto de atividades extracurriculares no desempenho escolar.</p>
+                        <button onclick="closeOverlay('nav-research')">Fechar</button>
+                    </div>
+                </div>
+
+                <!-- Company information overlay -->
+                <div id="nav-company" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Informações sobre o Colégio Victorino</h2>
+                        <p>O Colégio Victorino é uma instituição de ensino com mais de 20 anos de tradição na educação básica. Seu compromisso é oferecer um ensino de qualidade, com uma infraestrutura moderna e corpo docente altamente qualificado. Localizado em Itaim Paulista, o colégio atende alunos desde a educação infantil até o ensino médio, preparando-os para os desafios do futuro.</p>
+                        <button onclick="closeOverlay('nav-company')">Fechar</button>
+                    </div>
+                </div>
+
+                <!-- Product information overlay -->
+                <div id="nav-products" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Informações sobre Produtos Educacionais</h2>
+                        <p>O Colégio Victorino oferece uma série de produtos educacionais, como cursos extracurriculares, atividades complementares, e materiais didáticos desenvolvidos para melhorar o desempenho acadêmico. Além disso, a escola disponibiliza recursos tecnológicos como plataformas de aprendizagem online, aplicativos educativos e espaços de estudo colaborativo.</p>
+                        <button onclick="closeOverlay('nav-products')">Fechar</button>
+                    </div>
+                </div>
+
+                <!-- Safety information overlay -->
+                <div id="nav-safety" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Informações sobre Segurança</h2>
+                        <p>O Colégio Victorino adota rigorosos protocolos de segurança para garantir o bem-estar de seus alunos e funcionários. A escola conta com vigilância 24 horas, equipes treinadas para agir em situações de emergência, e protocolos de saúde que seguem as orientações das autoridades locais. Além disso, a escola promove ações educativas sobre segurança pessoal e prevenção de acidentes.</p>
+                        <button onclick="closeOverlay('nav-safety')">Fechar</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Mobile menu icon -->
+            <figure class="menu-icon">
+                <button onclick="menuShow()">
+                    <img src="assets/images/hamburguinho-img/hamburguinho.png" alt="image of menu-icon" class="icon-mobile">
+                </button>
+            </figure>
+
+            <!-- Mobile menu with additional links -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#" onclick="showDiv('nav-research')">RESEARCH</a></li>
+                    <li><a href="#">COMPANY</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">SAFETY</a></li>
+                </ul>
+                <!-- Video and Maquete (model) sections inside the mobile menu -->
+                <details>
+                    <!-- Videos section inside the mobile menu -->
+                    <summary>
+                        <h3>Vídeos</h3>
+                    </summary>
+                    <ul>
+                        <li><a href="#" onclick="mostrarVideo('assets/videos/exemplo1.mp4')">Vídeo 1</a></li>
+                        <li><a href="#" onclick="mostrarVideo('assets/videos/exemplo1.mp4')">Vídeo 2</a></li>
+                        <li><a href="#" onclick="mostrarVideo('assets/videos/exemplo1.mp4')">Vídeo 3</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <!-- Image section inside the mobile menu -->
+                    <summary>
+                        <h3>Maquete</h3>
+                    </summary>
+                    <ul>
+                        <li><a href="#" onclick="mostrarImagem('assets/img/bazinga.png')">Imagem Maquete 1</a></li>
+                        <li><a href="#" onclick="mostrarImagem('assets/img/bazinga.png')">Imagem Maquete 2</a></li>
+                        <li><a href="#" onclick="mostrarImagem('assets/img/bazinga.png')">Imagem Maquete 3</a></li>
+                    </ul>
+                </details>
+                    
+                <!-- Repeat overlays in the mobile menu -->
+                 
+                <!-- Research information overlay -->
+                <div id="nav-research" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Research Information</h2>
+                        <p>Conteúdo relacionado à pesquisa...</p>
+                        <button onclick="closeOverlay('nav-research')">Fechar</button>
+                    </div>
+                </div>
+                
+                <!-- Company information overlay -->
+                <div id="nav-company" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Company Information</h2>
+                        <p>Conteúdo relacionado à empresa...</p>
+                        <button onclick="closeOverlay('nav-company')">Fechar</button>
+                    </div>
+                </div>
+                
+                <!-- Product information overlay -->
+                <div id="nav-products" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Product Information</h2>
+                        <p>Conteúdo relacionado ao produto...</p>
+                        <button onclick="closeOverlay('nav-products')">Fechar</button>
+                    </div>
+                </div>
+                
+                 <!-- Safety information overlay -->
+                <div id="nav-safety" class="overlay" style="display: none;">
+                    <div class="overlay-content">
+                        <h2>Safety Information</h2>
+                        <p>Conteúdo relacionado à segurança...</p>
+                        <button onclick="closeOverlay('nav-safety')">Fechar</button>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        
+        <!--
+        -------------------------
+        Main Chat Section
+        -------------------------
+        -->
+
+        <main>
+            <section class="chat-container" id="partBot">
+                <!-- Fullscreen button for chat interface -->
+                <button class="fullscreen-button" onclick="fullScream()">
+                    <i class="ri-fullscreen-line"></i>
+                </button>
+                 <!-- Chat bot container with messages -->
+                 <!-- Chat bot container with messages -->
+                <div class="chat-bot">
+                    <!-- Displaying the bot's output message -->
+                    <div class="output-message" id="output">
+                        <div class="greeting" id="welcome">
+                            <div class="chat-icon">
+                                <!-- Logo do bot -->
+                                <figure class="bot-image">
+                                    <img src="assets/images/logo-img/logo-colegio.png" alt="Image of the bot IA" class="icon-bot">
+                                </figure>
+                            </div>
+                            <div class="chat-output" id="outputPart">
+                                <h2 id="reveal-title"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                     <!-- Chat input area for the user to type messages -->
+                    <div class="input-message">
+                        <div class="chat-input">
+                            <form id="gemini-ai">
+                                <textarea name="prompt" id="prompt" placeholder="Message VIC IA." rows="1" required></textarea>
+                                <div class="action-buttons">
+                                    <!-- File image button for uploading an image -->
+                                    <button class="file-image" type="button">
+                                        <i class="ri-image-fill" class="icon" onclick="showDiv('partPaid')"></i>
+                                    </button>
+                                     <!-- Send button to submit the message -->
+                                    <button class="send-place" id="btn-submit" type="submit">
+                                        <i class="ri-send-plane-2-fill"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Bot's suggestion buttons for the user -->
+                        <div class="suggestions-bot" id="suggestions-bot">
+                            <ul>
+                                <li><a href="#" onclick="setMessage('Me explique sobre o Curso técnico')">📚   Sobre o curso técnico</a></li>
+                                <li><a href="#" onclick="setMessage('Como você foi feito?')">💭  Como você foi feito?</a></li>
+                                <li><a href="#" onclick="showDiv('partPaid')">🖼️  Crie uma imagem</a></li>
+                                <li><a href="#" onclick="setMessage('Surpreenda-me')">🎲  Surpreenda-me</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--
+            -------------------------
+            Premium Content Access Section
+            -------------------------
+            -->
+
+            <div id="partPaid" class="overlay" style="display: none;">
+                <div class="overlay-content">
+                    <h2>Opa! Acesso Negado.</h2>
+                        <p>Você está tentando acessar uma área exclusiva para usuários Premium. 😕 </p>
+                        <p>Mas não se preocupe, é fácil liberar esse conteúdo!</p>
+                    <h2>🔒 Como desbloquear?</h2>
+                        <p>Basta assinar a versão Premium para acessar todas as funcionalidades incríveis e continuar a aproveitar o poder da nossa plataforma.</p>
+                    <h2>Vantagens da versão Premium</h2>
+                        <ul>
+                            <li>Criação ilimitada de imagens</li>
+                            <li>Acesso a conteúdos exclusivos</li>
+                            <li>E muito mais!</li>
+                        </ul>
+                        <p>Não perca mais tempo, aproveite as vantagens agora mesmo! 😉</p>
+                    <button onclick="closeOverlay('partPaid')">Fechar</button>
+                </div>
+            </div>
+
+            <!-- 
+                -------------------------
+                Sidebar Section with media links
+                -------------------------
+            -->
+
+            <aside class="menu-nav">
+                <!-- Section header for "Videos" -->
+                <h3>Vídeos</h3>
+                 <!-- Unordered list of video links -->
+                <ul>
+                    <!-- Video 1 link, clicking triggers the 'mostrarVideo' function with the path of the video -->
+                    <li><a href="#" onclick="mostrarVideo('assets/videos/exemplo1.mp4')">Vídeo 1</a></li>
+                    <!-- Video 2 link, similarly triggers the 'mostrarVideo' function with different video file -->
+                    <li><a href="#" onclick="mostrarVideo('assets/videos/exemplo1.mp4')">Vídeo 2</a></li>
+                    <!-- Video 3 link, triggers the 'mostrarVideo' function for the third video -->
+                    <li><a href="#" onclick="mostrarVideo('assets/videos/exemplo1.mp4')">Vídeo 3</a></li>
+                </ul>
+                <!-- Section header for "Maquete" (Model Images) -->
+                <h3>Maquete</h3>
+
+                 <!-- Unordered list of model image links -->
+                <ul>
+                    <!-- Image Maquete 1, triggers the 'mostrarImagem' function to display the image -->
+                    <li><a href="#" onclick="mostrarImagem('assets/images/bazinga.png')">Imagem Maquete 1</a></li>
+                    <!-- Image Maquete 2, same as above but for the second model image -->
+                    <li><a href="#" onclick="mostrarImagem('assets/images/bazinga.png')">Imagem Maquete 2</a></li>
+                     <!-- Image Maquete 3, same as above but for the third model image -->
+                    <li><a href="#" onclick="mostrarImagem('assets/images/bazinga.png')">Imagem Maquete 3</a></li>
+                </ul>
+            </aside>
+
+            <!--
+                -------------------------
+                Overlay for images and videos
+                -------------------------
+            -->
+
+            <!-- Overlay container for displaying images -->
+            <div id="overlayImagemContainer" class="overlay">
+                <img id="overlayImage" src="" alt="" />
+            </div>
+            <!-- Video element with multiple sources for different video formats -->
+            <div id="overlayVideoContainer" class="overlay">
+                <!-- Video element with multiple sources for different video formats -->
+                <video id="overlayVideo" width="20rem" controls>
+                    <!-- MP4 video format -->
+                    <source src="" type="video/mp4">
+                    <!-- WebM video format -->
+                    <source src="" type="video/webm">
+                    <!-- OGG video format -->
+                    <source src="" type="video/ogg">
+                    <!-- Message displayed if the browser does not support the video tag -->
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+        </main>
+        <!--
+        -------------------------
+        External Scripts
+        -------------------------
+        -->
+        <!-- Including the main JavaScript file -->
+        <script src="assets/script/script.js"></script>
+        <script>
+            window.onload = () => {
+              document.body.classList.add('visible'); // Ativa a transição na entrada
+            };
+          </script>
+    </body>
+</html>

@@ -1,0 +1,368 @@
+/* Mobile-first styles for very small devices (max-width: 480px and max-height: 970px) */
+@media (max-width: 480px) and (max-height: 970px){
+    header figure .logo-header{
+        width: 40%;
+    }
+    header nav{
+        display: none;
+    }
+    header .menu-icon{
+        display: inline;
+    }    
+    header .menu-icon button img{
+        width: 60%;
+    }
+    .chat-container{
+        width: 95%;
+        height: 35rem;
+        margin: 1rem;
+    }
+    .chat-container button{
+        display: none;
+    }
+    .chat-container .output-message .greeting{
+        width: 100%;
+        margin-right: 1rem;
+    }
+    .chat-container .output-message .icon-bot{
+        width: 160px;
+        height: auto;
+    }
+    .chat-container .output-message h2{
+        font-size: 0.75rem;
+        margin-left: 1rem;
+    }
+    .chat-container .input-message .chat-input{
+        order: 2;
+        width: 100%;
+    }
+    .chat-container .suggestions-bot ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        gap: 2rem;
+    }
+    .chat-container .suggestions-bot ul li a{
+        font-size: 11px;
+        padding: 0.5rem;
+    }
+    .chat-container .suggestions-bot ul li a:hover{
+        font-size: 12.5px;
+    }
+    div .role-user {
+        position: relative;
+        margin: 0;
+    }
+    #overlayImg {
+        max-width: 90%;
+        max-height: 90%;
+        border: 2px solid white;
+    }
+    #overlayVideo {
+        width: 350px;
+        height: 200px;
+        border: 2px solid white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+    .overlay-content{
+        width: 70%;
+        height: 70%;
+        overflow: auto;
+    }
+    .menu-nav{
+        display: none;
+    }
+}
+
+/* Small to medium devices (max-width: 970px and max-height: 480px) */
+@media (max-width: 970px) and (max-height: 480px){
+    header nav{
+        display: none;
+    }
+    header .menu-icon{
+        display: inline;
+    }  
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header figure .logo-header{
+        width: 40%;
+    }
+    header .menu-icon button img{
+        width: 60%;
+    }   
+    .chat-container{
+        width: 95%;
+        height: 18rem;
+        margin: 1rem;
+    }
+    .chat-container .fullscreen-button{
+        display: none;
+    }
+    .chat-container .output-message .icon-bot{
+        margin-top: 10px;
+        width: 60px;
+        height: auto;
+    }
+    .chat-container .output-message h2{
+        font-size: 1rem;
+    }
+    .chat-container{
+        margin-top: -10px;
+    }
+    .chat-container .input-message .chat-input{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        order: 2;
+        width: 100%;
+    }
+    .chat-container .input-message .suggestions-bot ul{
+        margin-bottom: -15px;
+    }
+    .chat-container .suggestions-bot ul li a{
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+    #overlayImg {
+        max-width: 90%;
+        max-height: 90%;
+        border: 2px solid white;
+    }
+    #overlayVideo {
+        width: 550px;
+        height: 325px;
+        border: 2px solid white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+    .overlay-content{
+        width: 70%;
+        height: 70%;
+        overflow: auto;
+    }
+    .menu-nav{
+        display: none;
+    }
+}
+
+/* Larger screens (min-width: 760px and min-height: 1000px) */
+@media (min-width: 760px) and (min-height: 1000px){
+    header nav{
+        display: none;
+    }
+    header .menu-icon{
+        display: inline;
+    }  
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header figure .logo-header{
+        width: 40%;
+    }
+    header .menu-icon button img{
+        width: 60%;
+    }   
+    .chat-container{
+        width: 95%;
+        height: 45rem;
+        margin: 1rem;
+    }
+    .chat-container .fullscreen-button{
+        display: none;
+    }
+    .chat-container .output-message .icon-bot{
+        width: 80px;
+        height: 60px;
+    }
+    .chat-container .output-message h2{
+        font-size: 1.25rem;
+    }
+    .chat-container{
+        margin-top: -10px;
+    }
+    .chat-container .input-message .chat-input{
+        order: 2;
+        width: 100%;
+    }
+    .chat-container .suggestions-bot ul li a{
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+    #overlayImg {
+        max-width: 90%;
+        max-height: 90%;
+        border: 2px solid white;
+    }
+    #overlayVideo {
+        width: 750px;
+        height: 420px;
+        border: 2px solid white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+    .menu-nav{
+        display: none;
+    }
+}
+
+/* Larger screens (min-width: 1000px and max-width: 1200px) */
+@media (min-width: 1000px) and (min-height: 760px) and (max-width: 1200px) and (max-height: 1050px){
+    header nav{
+        display: none;
+    }
+    header .menu-icon{
+        display: inline;
+    }  
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header figure .logo-header{
+        width: 40%;
+    }
+    header .menu-icon button img{
+        width: 60%;
+    }   
+    .chat-container{
+        width: 95%;
+        height: 35rem;
+        margin: 1rem;
+    }
+    .chat-container .fullscreen-button{
+        display: none;
+    }
+    .chat-container .output-message .icon-bot{
+        width: 80px;
+        height: 60px;
+    }
+    .chat-container .output-message h2{
+        font-size: 1.25rem;
+    }
+    .chat-container{
+        margin-top: -10px;
+    }
+    .chat-container .input-message .chat-input{
+        order: 2;
+        width: 100%;
+    }
+    .chat-container .suggestions-bot ul li a{
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .menu-nav{
+        display: none;
+    }
+}
+
+/* Very large screens (min-width: 1025px and min-height: 790px) */
+@media (min-width: 1025px) and (min-height: 790px){
+    .chat-container .suggestions-bot ul{
+        justify-content: space-around;
+        align-items: center;
+        gap: 3rem;
+    }
+    .chat-container .output-message .icon-bot{
+        width: 120px;
+        height: 80px;
+    }
+    .chat-container.expanded ~ .menu-nav {
+        margin-left: -32%;
+    }
+}
+@media (min-width: 1800px) {
+    header nav{
+        display: block;
+    }
+    header .menu-icon{
+        display: none;
+    } 
+    .menu-nav{
+        display: block;
+    }
+}
+
+.role-bot .text,
+.role-user .text {
+    max-width: 90%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* Garante que palavras longas sejam quebradas */
+    word-break: break-word;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #5F4B7B;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+/* Estilos específicos para elementos gerados pelo markdown */
+.role-bot .text {
+    /* Para links longos */
+    a {
+        word-break: break-all;
+    }
+
+    /* Para blocos de código */
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 16px;
+        border-radius: 6px;
+        background-color: #090909;
+    }
+
+    /* Para código inline */
+    code {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 2px 0;
+        border-radius: 4px;
+    }
+
+    /* Para tabelas */
+    table {
+        max-width: 100%;
+        overflow-x: auto;
+        display: block;
+        border-collapse: collapse;
+    }
+
+    /* Para imagens */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Para listas */
+    ul, ol {
+        padding-left: 20px;
+        margin: 8px 0;
+    }
+
+    /* Para parágrafos */
+    p {
+        margin: 8px 0;
+        line-height: 1.5;
+    }
+}
+
+/* Ajuste para containers de mensagens */
+.role-bot,
+.role-user {
+    width: 100%;
+    display: flex;
+    margin: 8px 0;
+}
+
+.role-bot {
+    justify-content: flex-start;
+}
+
+.role-user {
+    justify-content: flex-end;
+}

@@ -1,0 +1,842 @@
+/* 
+    -------------------------
+    Charset and Font Imports
+    -------------------------
+*/
+
+/* Define the character encoding to ensure proper rendering of characters */
+@charset "UTF-8";
+
+/* Importing Google Fonts for consistent typography */
+
+/* Importing an additional font style */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Importing an additional font style */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Importing reset CSS to standardize the styling across browsers */
+@import url(../css/reset.css);
+
+/* 
+    -------------------------
+    Custom Font Face
+    -------------------------
+*/
+
+/* Declaring a custom font ('FlastyTrial') and providing the font file location */
+@font-face {
+    font-family: 'FlastyTrial';
+    src: url('../fonts/aside-font/title/FLASTY-Trial-BF656694f78e2cd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 
+    -------------------------
+    Body Styling
+    -------------------------
+*/
+
+/* Set a background image for the body and ensure it covers the entire viewport */
+body{
+    background: url(../images/background-img/background-image.png) no-repeat center / cover;
+    height: 100vh;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease; /* Transição para visível */
+}
+
+body.visible {
+    opacity: 1; /* Torna visível */
+  }
+
+
+/* 
+    -------------------------
+    Header Styling
+    -------------------------
+*/
+
+/* Styling for the header, making it a flex container */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Logo styling */
+.logo-header {
+    width: 13rem;
+}
+
+/* Ensures the header has relative positioning for positioning child elements */
+header {
+    position: relative;
+}
+
+/* Navigation styling in the header */
+header nav {
+    width: 50vw;
+    height: 12vh;
+    clip-path: polygon(10% 8%, 100% 0, 90% 100%, 0 90%);
+    background-color: rgba(0, 0, 0, 0.2);
+    --glow-color: rgb(168, 103, 230);
+    --glow-spread-color: rgba(166, 88, 240, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    border: 5px solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 2em 5em var(--glow-spread-color),
+            inset 0 0 .50em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* Styling for the unordered list in the navigation */
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem 10rem;
+}
+
+/* Styling for each navigation link */
+header nav ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+
+div #welcome {
+    margin-left: 5%;
+    margin-top: 12%;
+}
+
+/* Hover effect for navigation links */
+header nav ul li a:hover{
+    opacity: 1;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* Hides the menu icon on larger screens */
+header .menu-icon{
+    display: none;
+}
+
+/* 
+    -------------------------
+    Main Content Styling
+    -------------------------
+*/
+
+/* Main container that holds the content */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* Styling for the chat container and menu navigation */
+.chat-container,
+.menu-nav{
+    border: 2px solid #5F4B7B;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    --glow-color: rgb(168, 103, 230);
+    --glow-spread-color: rgba(166, 88, 240, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    border: .10em solid var(--glow-color);
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 2px;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+            0 0 2em 0.5em var(--glow-spread-color),
+            inset 0 0 .75em .25em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* Styling for the chat container */
+.chat-container {
+    height: 35rem;
+    width: 55%;
+    transition: width 0.5s ease;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+  
+/* When the chat container is expanded, set its width to 90% */
+.chat-container.expanded{
+    width: 80vw;
+    height: 90vh;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5) blur;
+    backdrop-filter: blur(50px); /* Aplica o desfoque no fundo */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores WebKit */
+    z-index: 1;
+    margin-bottom: 80px;
+}
+
+
+
+/* 
+    -------------------------
+    Menu Navigation
+    -------------------------
+*/
+
+/* Menu navigation styled as a vertical column */
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 35rem;
+    transition: margin-left 0.5s ease;
+    padding-top: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* When the chat container is expanded, the menu moves left */
+/* 
+    -------------------------
+    Fullscreen Button
+    -------------------------
+*/
+
+/* Fullscreen button styling */
+.chat-container .fullscreen-button {
+    float: right;
+    border: none;
+    font-size: 1.75rem;
+    background: none;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* 
+    -------------------------
+    Chat Bot Container
+    -------------------------
+*/
+
+/* Chatbot container styling to arrange the content vertically */
+.chat-container {
+    overflow: hidden; /* Impede elementos de ultrapassar o container */
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+
+.area-logo-bot {
+    max-width: 50px; 
+    height: 30px;
+    margin-right: 40px; 
+    display: inline-block;
+}
+
+.Logobot-text {
+    display: flex; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.Logobot-text .text {
+    color: white;
+    text-justify: auto;
+}
+
+div .role-user {
+    margin-left: 110px;
+    position: relative;
+}
+
+
+/* Styling for output messages and chat input areas to have equal width */
+.output-message, .chat-input{
+    width: 85%;
+}
+
+/* 
+    -------------------------
+    Output Message Styling
+    -------------------------
+*/
+
+/* Output message container styling */
+.output-message .greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* 
+    -------------------------
+    Bot Icon Styling
+    -------------------------
+*/
+
+/* Bot icon styling */
+.icon-bot {
+    width: 400px;
+}
+
+
+/* 
+    -------------------------
+    Chat Input Section Styling
+    -------------------------
+*/
+
+/* 
+========================================
+Styling for the Chat Container
+========================================
+*/
+.chat-container {
+    height: 35rem;
+    width: 55%;
+    overflow: hidden; /* Prevents overflow issues */
+    overflow-y: auto; /* Enables vertical scrolling */
+    transition: width 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Subtle blur effect */
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Expanded state for the chat container */
+.chat-container.expanded {
+    width: 80vw;
+    height: 90vh;
+    position: absolute;
+    text-align: center;
+    margin-bottom: 150px;
+    z-index: 1;
+}
+
+/* Custom scroll for the chat container */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+.chat-container::-webkit-scrollbar-track {
+    background: rgba(50, 33, 62, 0.5);
+    border-radius: 10px;
+}
+.chat-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2f023d, #9b27be);
+    border-radius: 10px;
+    border: 2px solid rgba(50, 33, 62, 0.5);
+}
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #7700ff, #8c00ff);
+}
+.chat-container::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #9F95FF, #8C81C7);
+}
+
+/* 
+========================================
+Menu Navigation
+========================================
+*/
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 35rem;
+    transition: margin-left 0.5s ease;
+    padding-top: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 
+========================================
+Fullscreen Button
+========================================
+*/
+.chat-container .fullscreen-button {
+    float: right;
+    border: none;
+    font-size: 1.75rem;
+    background: none;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* 
+========================================
+Chat Bot Container
+========================================
+*/
+/* Estilo para o ícone do bot */
+.bot-image {
+    width: 80px; /* Tamanho do ícone */
+    height: auto;
+    margin-right: 30px; /* Espaço entre o ícone e a mensagem */
+    display: inline-block;
+}
+/* Styling for messages and input areas */
+.output-message, 
+.chat-input {
+    width: 85%;
+    margin-top: 5%;
+}
+
+
+/* 
+========================================
+Output Message Styling
+========================================
+*/
+.output-message .greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* 
+========================================
+Bot Icon Styling
+========================================
+*/
+.icon-bot {
+    width: 400px;
+}
+
+
+
+/* 
+========================================
+Chat Input Section Styling
+========================================
+*/
+.chat-container .input-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chat-container .chat-input {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: #32213E;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Form container */
+.chat-container .chat-input form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+/* Textarea for input */
+.chat-container .chat-input form textarea {
+    width: 85%;
+    resize: none;
+    overflow-y: hidden;
+    border: none;
+    background: none;
+    outline: none;
+    font-family: "Anonymous Pro", monospace;
+    color: #FFF;
+}
+
+/* 
+========================================
+File and Send Buttons
+========================================
+*/
+.chat-container .chat-input .file-image,
+.chat-container .chat-input .send-place {
+    color: #FFF;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* 
+========================================
+Suggestions from Bot
+========================================
+*/
+.chat-container .suggestions-bot ul {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.chat-input {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+/* Bot suggestion links */
+.chat-container .suggestions-bot ul li a {
+    font-size: 13px;
+    color: #FFF;
+    font-family: "Anonymous Pro", monospace;
+    border: 1px solid #32213E;
+    padding: 1rem;
+    background-color: #32213E;
+    border-radius: 2rem;
+    transition: 0.5s;
+}
+
+.chat-container .suggestions-bot ul li a:hover {
+    border: 2px solid #FFF;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* 
+========================================
+New Additions
+========================================
+*/
+
+/* Transition for smooth expansion */
+.chat-container.expanded {
+    animation: expand-animation 0.5s forwards;
+}
+
+
+@keyframes expand-animation {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* 
+    -------------------------
+    Navigation Menu
+    -------------------------
+*/
+
+/* Styling for the navigation menu list items */
+.menu-nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+/* Styling for the links inside the navigation menu */
+.menu-nav ul li a {
+    text-decoration: none;
+    font-family: "Anonymous Pro", monospace;
+    color: #FFF;
+    text-shadow:
+        2px 2px 0px #454545,
+        -2px -2px 0px #454545,
+        2px -2px 0px #454545,
+        -2px 2px 0px #454545;
+    transition: 1s;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+/* Hover effect for navigation menu links */
+.menu-nav ul li a:hover {
+    opacity: 1;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* 
+    -------------------------
+    Navigation Menu Titles
+    -------------------------
+*/
+
+/* Styling for the headings inside the navigation menu */
+.menu-nav h3{
+    font-size: 30px;
+    font-family: 'FlastyTrial', sans-serif;
+    margin: 2rem 0;
+    text-align: center;
+    color: #FFF;
+    text-shadow:
+    2px 2px 0px #5F4B7B,
+    -2px -2px 0px #5F4B7B,
+    2px -2px 0px #5F4B7B,
+    -2px 2px 0px #5F4B7B;
+}
+
+/* Removes margin from the first title (in case it's at the top) */
+.menu-nav h3:first-child{
+    margin: 0rem;
+}
+
+/* 
+    -------------------------
+    Menu Icon Button (for mobile or side menu)
+    -------------------------
+*/
+
+/* Styling for the menu icon button in the header */
+header .menu-icon button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 
+    -------------------------
+    Mobile Menu (Hidden by Default)
+    -------------------------
+*/
+
+/* Mobile menu that will appear on smaller screens */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    background-color: #231932;
+    border: 2px solid #7A5EA0;
+    top: 120px;
+    width: 100%;
+    padding: 20px;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease-out;
+    z-index: 1;
+}
+
+/* 
+    -------------------------
+    Mobile Menu Animation
+    -------------------------
+*/
+
+/* Class to show the mobile menu and apply animation when it's open */
+.mobile-menu.open {
+    display: block;
+    animation: show-menu 0.5s ease-out forwards;
+    opacity: 1;
+}
+
+
+/* Styling for the list items inside the mobile menu */
+.mobile-menu ul li{
+    margin: 1.5rem 0;
+}
+
+/* Styling for links inside the mobile menu */
+.mobile-menu ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+
+/* Hover effect for the links inside the mobile menu */
+.mobile-menu ul li a:hover{
+    opacity: 1;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Styling for the summary heading inside a details tag (expandable sections) */
+.mobile-menu details summary h3{
+    font-size: 30px;
+    font-family: 'FlastyTrial', sans-serif;
+    margin: 1rem 0;
+    color: #FFF;
+    cursor: pointer;
+    text-shadow:
+    2px 2px 0px #5F4B7B,
+    -2px -2px 0px #5F4B7B,
+    2px -2px 0px #5F4B7B,
+    -2px 2px 0px #5F4B7B;
+}
+
+/* 
+    -------------------------
+    Overlay Styles (for image and video modals)
+    -------------------------
+*/
+
+/* Styling for the overlay containers that will hold images or videos */
+#overlayImagemContainer,
+#overlayVideoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Styling for the image inside the overlay container */
+#overlayImage {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid white;
+}
+
+
+/* Styling for the video inside the overlay container */
+#overlayVideo {
+    width: 1050px;
+    height: 600px;
+    border: 2px solid white;
+
+}
+
+/* 
+    -------------------------
+    Generic Overlay Styles
+    -------------------------
+*/
+
+/* Generic overlay style for modal windows */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: all;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s ease-out forwards, slideIn 0.5s ease-out forwards;
+    color: #FFF;
+}
+.overlay .overlay-content h2{
+    font-weight: bold;
+    text-align: center;
+}
+.overlay .overlay-content p,
+.overlay .overlay-content ul{
+    margin: 10px;
+    text-align: justify;
+    list-style: disc;
+}
+.overlay ul li{
+    margin-left: 20px;
+}
+.overlay .overlay-content button{
+    background-color: #4B3E5E;
+    padding: 20px 60px;
+    border-radius: 2rem;
+}
+
+.overlay-content {
+    background-color: #231932;
+    border: 3px solid #5F4B7B;
+    animation: borderGlowMove 15s infinite;
+    width: 60%;
+    width: 60%;
+    overflow-y: scroll;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}  
+
+
+/*
+-------------------------
+Mobile Menu Animation Keyframes
+-------------------------
+*/
+
+/* Keyframes for animating the mobile menu when it is opened */
+@keyframes show-menu {
+    0% {
+        transform: translateY(-5%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fading in the overlay */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for sliding the overlay into view */
+@keyframes slideIn {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Keyframes for border glow move */
+@keyframes borderGlowMove {
+    0% {
+      box-shadow: 0 0 5px #5F4B7B, 0 0 10px #5F4B7B, 0 0 0px #6A4C93;
+    }
+    25% {
+      box-shadow: 5px 0 10px #5F4B7B, 5px 0 50px #6A4C93, 0 0 0px #6A4C93;
+    }
+    50% {
+      box-shadow: 0 5px 10px #5F4B7B, 0 5px 50px #6A4C93, 0 0 0px #6A4C93;
+    }
+    75% {
+      box-shadow: -5px 0 10px #5F4B7B, -5px 0 50px #6A4C93, 0 0 0px #6A4C93;
+    }
+    100% {
+      box-shadow: 0 0 5px #5F4B7B, 0 0 10px #5F4B7B, 0 0 0px #6A4C93;
+    }
+}
